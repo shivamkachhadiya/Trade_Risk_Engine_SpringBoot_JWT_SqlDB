@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-
+//create my sql table
 @Data
 @Entity
 @Table(name = "users")
