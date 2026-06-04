@@ -9,5 +9,4 @@ public class TradeRiskEngineApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TradeRiskEngineApplication.class, args);
 	}
-
 }
