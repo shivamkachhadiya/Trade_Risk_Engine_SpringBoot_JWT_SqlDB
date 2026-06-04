@@ -1,3 +1,19 @@
+
+📄 Resume Description & Bullet Points
+TradeShield: High-Concurrency Order Management & Risk Validation Engine
+Tech Stack: Java 25, Spring Boot 3.5, Spring Security, JWT, MySQL, Hibernate JPA, Finnhub REST API, Lombok
+
+Architected a High-Throughput Order Management System (OMS) from scratch utilizing Spring Boot and Java 25 to securely validate, execute, and record high-volume market buy/sell orders.
+
+Eliminated Race Conditions & Double-Spending: Engineered robust database-level concurrency controls by implementing PESSIMISTIC_WRITE locks on the user repository, ensuring atomic balance-checking and transactional integrity under multi-threaded loads.
+
+Integrated Real-Time Market Anti-Cheat Mechanism: Developed an asynchronous pricing layer using Spring RestTemplate to integrate third-party market data feeds (Finnhub API), overriding manipulated client-side price inputs for programmatic dynamic validation.
+
+Enforced Strict Structural Integrity via Design Patterns: Implemented the Factory Design Pattern (OrderFactory) to cleanly decouple complex conditional object creation logic (MARKET vs. LIMIT orders) from core business services.
+
+Designed Stateless Security & Unified Error Framework: Implemented stateless JWT token-based authentication middleware combined with a Spring @RestControllerAdvice global exception handler to intercept runtime operational errors and produce clean, production-grade JSON responses.
+
+
 HTTP Method: POST
 
 URL: http://localhost:8080/api/auth/register
