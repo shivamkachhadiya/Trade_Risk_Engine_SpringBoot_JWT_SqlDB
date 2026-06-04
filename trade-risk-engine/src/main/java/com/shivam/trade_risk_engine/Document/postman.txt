@@ -1,0 +1,78 @@
+HTTP Method: POST
+
+URL: http://localhost:8080/api/auth/register
+
+Body (raw -> JSON):
+
+JSON
+{
+  "name": "Shivam Kachhadiya",
+  "email": "shivam@vit.edu",
+  "password": "securepassword123",
+  "role": "TRADER",
+  "availableBalance": 100000.00
+}
+
+**HTTP Method:** `POST`
+*   **URL:** `http://localhost:8080/api/auth/login`
+*   **Body (raw -> JSON):**
+    ```json
+    {
+      "email": "shivam@vit.edu",
+      "password": "securepassword123"
+    }
+
+
+HTTP Method: POST
+
+URL: http://localhost:8080/api/orders
+
+Headers: Authorization: Bearer <Tera_Token>
+
+Body (raw -> JSON):
+
+JSON
+{
+  "userId": 1,
+  "symbol": "NVDA",
+  "orderType": "MARKET",
+  "tradeSide": "BUY",
+  "quantity": 5,
+  "price": 0.00
+}
+
+HTTP Method: POST
+
+URL: http://localhost:8080/api/orders
+
+Headers: Authorization: Bearer <Tera_Token>
+
+Body (raw -> JSON):
+
+JSON
+{
+  "userId": 1,
+  "symbol": "NVDA",
+  "orderType": "MARKET",
+  "tradeSide": "SELL",
+  "quantity": 2,
+  "price": 0.00
+}
+
+
+HTTP Method: GET
+
+URL: http://localhost:8080/api/portfolio/1 (Aakhri mein 1 teri user ID hai)
+
+Headers: Authorization: Bearer <Tera_Token>
+
+Body: none
+
+
+HTTP Method: GET
+
+URL: http://localhost:8080/api/orders/user/1
+
+Headers: Authorization: Bearer <Tera_Token>
+
+Body: none

@@ -1,9 +1,9 @@
 package com.shivam.trade_risk_engine.service;
 
-
 import com.shivam.trade_risk_engine.model.Order;
 import com.shivam.trade_risk_engine.model.OrderStatus;
 import com.shivam.trade_risk_engine.model.OrderType;
+import com.shivam.trade_risk_engine.model.TradeSide;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -13,11 +13,12 @@ import java.time.LocalDateTime;
 public class OrderFactory {
 
     public Order createOrder(Long userId, String symbol,
-                             OrderType type, Integer quantity, BigDecimal price) {
+                             OrderType type, Integer quantity, BigDecimal price, TradeSide tradeSide) {
         Order order = new Order();
         order.setUserId(userId);
         order.setSymbol(symbol);
         order.setOrderType(type);
+        order.setTradeSide(tradeSide); // Ye line nayi hai
         order.setQuantity(quantity);
         order.setStatus(OrderStatus.PENDING);
         order.setCreatedAt(LocalDateTime.now());

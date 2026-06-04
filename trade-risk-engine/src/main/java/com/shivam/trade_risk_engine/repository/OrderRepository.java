@@ -7,6 +7,8 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, Long> {
     // Custom query: Apne aap banegi 'SELECT * FROM orders WHERE user_id = ?'
     List<Order> findByUserId(Long userId);
+
+
 }
 //
 //

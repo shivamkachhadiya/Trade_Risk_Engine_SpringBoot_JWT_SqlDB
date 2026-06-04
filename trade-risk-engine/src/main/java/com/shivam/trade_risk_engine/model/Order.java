@@ -37,4 +37,9 @@ public class Order {
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
+    // Baaki fields ke sath ye nayi field daal de
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TradeSide tradeSide;
+
 }

@@ -2,12 +2,16 @@ package com.shivam.trade_risk_engine.repository;
 
 import com.shivam.trade_risk_engine.model.Portfolio;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 public interface PortfolioRepository extends JpaRepository<Portfolio, Long> {
 
     // Custom SQL Query: "Bhai, check karke bata kya is user ke paas pehle se ye share hai?"
     Optional<Portfolio> findByUserIdAndSymbol(Long userId, String symbol);
+
+    List<Portfolio> findByUserId(Long userId);
 }
 
 //
